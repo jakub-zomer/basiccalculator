@@ -1,35 +1,21 @@
-package cz.zomer.basicCalculator
+package cz.zomer.basiccalculator
 
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.Assert
-import org.junit.Test
 import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.CsvSource
-import org.junit.jupiter.params.provider.MethodSource
 
+class CalculationServiceTest {
 
-internal class CalculationServiceAdditionKtTest {
-    @ParameterizedTest
-    @MethodSource("calculationService")
+    val service: CalculationService = CalculationService()
+
+    @ParameterizedTest(name="Run {index}: a={0}, b={1}, result={2}")
     @CsvSource(
-        "1.0, 3.0, 4.0",
-        "3.0, 2.0, 5.0",
-        "89.0, 23.0, 112.0",
-        "20.0, 10.0, 30"
+            "1.0, 3.0, 4.0",
+            "3.0, 2.0, 5.0"
     )
-    fun add() {
-        addition()
-
-
-
-    }
-    companion object{
-        @JvmStatic
-        fun addition() = listOf(
-            Arguments.of()
-        )
+    fun add(a: Double, b: Double, result: Double) {
+        assertThat(service.addition(a, b)).isEqualTo(result)
     }
 
     /*fun addition () {

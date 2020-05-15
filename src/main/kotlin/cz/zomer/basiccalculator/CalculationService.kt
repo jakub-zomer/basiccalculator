@@ -1,6 +1,6 @@
-package cz.zomer.basicCalculator
+package cz.zomer.basiccalculator
 
-class calculationService() {
+class CalculationService {
 
     fun addition(a: Double, b: Double): Double {
         return a + b
