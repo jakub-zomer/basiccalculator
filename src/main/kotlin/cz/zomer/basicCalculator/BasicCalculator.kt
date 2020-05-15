@@ -5,7 +5,7 @@ fun main() {
     println("set value b")
     val b = readLine()!!.toDouble()
 
-    val service = calculationService()
+    val service = CalculationService()
     val su = service.addition(a, b)
     println("Addition = $su")
     val sub = service.substraction(a, b)

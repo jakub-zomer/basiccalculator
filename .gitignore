@@ -1,6 +1,5 @@
 /build/
 /.gradle/
 /.idea/
-/gradle/
 /src/test/java/
 /src/main/java/

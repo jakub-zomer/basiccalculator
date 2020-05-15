@@ -10,9 +10,9 @@ import org.junit.jupiter.params.provider.CsvSource
 import org.junit.jupiter.params.provider.MethodSource
 
 
-internal class CalculationServiceAdditionKtTest {
+internal class CalculationServiceAdditionTest {
     @ParameterizedTest
-    @MethodSource("calculationService")
+    @MethodSource
     @CsvSource(
         "1.0, 3.0, 4.0",
         "3.0, 2.0, 5.0",
