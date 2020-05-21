@@ -6,7 +6,7 @@ class CalculationService {
         return a + b
     }
 
-    fun substraction(a: Double, b: Double): Double {
+    fun subtraction(a: Double, b: Double): Double {
         return a - b
     }
 
